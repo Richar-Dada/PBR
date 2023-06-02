@@ -2,11 +2,14 @@ import { vec3, vec4, quat, mat4 } from "gl-matrix";
 
 import { CubeMap } from "./cubeMap";
 import { Cube } from "./cube";
+import { Skybox } from "./skybox";
 
 export class PBR {
   cubeMap = new CubeMap();
 
   cube = new Cube();
+
+  skybox = new Skybox();
 
   modelView = mat4.create();
   cameraMatrix = mat4.create();
@@ -47,10 +50,15 @@ export class PBR {
     this.cube.init();
     this.cube.bind();
 
-    this.cubeMap.setGL(this.gl);
-    await this.cubeMap.loadAll();
-    this.cubeMap.init();
-    this.cubeMap.bind();
+    this.skybox.setGL(this.gl);
+    await this.skybox.loadAll();
+    this.skybox.init();
+    this.skybox.bind();
+
+    // this.cubeMap.setGL(this.gl);
+    // await this.cubeMap.loadAll();
+    // this.cubeMap.init();
+    // this.cubeMap.bind();
   }
 
   render = () => {
@@ -77,9 +85,10 @@ export class PBR {
 
     // mat4.identity(this.modelView)
 
-    this.cubeMap.draw(this.modelView, this.perspective);
+    // this.cubeMap.draw(this.modelView, this.perspective);
 
-    this.cube.draw(this.modelView, this.perspective);
+    // this.cube.draw(this.modelView, this.perspective);
+    this.skybox.draw(this.modelView, this.perspective);
 
     requestAnimationFrame(this.render);
   };

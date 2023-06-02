@@ -1,8 +1,8 @@
 import { vec3, vec4, quat, mat4 } from "gl-matrix";
 
 import { Utils } from "./util";
-import { vsCube } from "./shaders/vs-cube";
-import { fsCube } from "./shaders/fs-cube";
+import { vsCube } from "./shaders/cube/vs-cube";
+import { fsCube } from "./shaders/cube/fs-cube";
 
 export class Cube {
   gl: WebGL2RenderingContext | null = null;
