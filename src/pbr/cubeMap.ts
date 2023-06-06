@@ -1,6 +1,6 @@
 import { vec3, vec4, quat, mat4 } from "gl-matrix";
 
-import { Utils } from "./util";
+import { Utils } from "./utils/util";
 import { vsCubeMap } from "./shaders/vs-cube-map";
 import { fsCubeMap } from "./shaders/fs-cube-map";
 

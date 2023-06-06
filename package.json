@@ -38,7 +38,8 @@
   "dependencies": {
     "gl-matrix": "^3.4.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "three": "^0.153.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.2",
@@ -53,6 +54,7 @@
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
     "@types/testing-library__user-event": "^4.2.0",
+    "@types/three": "^0.152.1",
     "@typescript-eslint/eslint-plugin": "^5.29.0",
     "@typescript-eslint/parser": "^5.29.0",
     "@vitejs/plugin-legacy": "^1.8.2",
